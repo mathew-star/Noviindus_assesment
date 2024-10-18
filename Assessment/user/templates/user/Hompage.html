@@ -1,0 +1,39 @@
+{% extends 'user/base.html' %}
+
+{% block content %}
+
+<main class="homepage">
+    <header class="homepage__header">
+        <div class="container">
+            <h1 class="homepage__title">Assessment Dashboard</h1>
+            <nav class="homepage__nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="homepage__hero">
+        <div class="container">
+            <h2>Welcome, {{ user_data.first_name }}!</h2>
+            <p>Manage your assessments and track your progress.</p>
+        </div>
+    </section>
+
+    <section class="homepage__content">
+
+            <div class="user-card">
+                <h3>Your Information</h3>
+                <p><strong>Name:</strong> {{ user_data.first_name }} {{ user_data.last_name }}</p>
+                <p><strong>Email:</strong> {{ user_data.email }}</p>
+                <p><strong>Username:</strong> {{ user_data.username }}</p>
+            </div>
+
+    </section>
+</main>
+
+{% endblock %}
