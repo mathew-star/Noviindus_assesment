@@ -9,6 +9,7 @@ body {
 }
 
 .form-container {
+
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -108,8 +109,13 @@ body {
     --color-secondary: #50e3c2;
     --color-background: #f5f7fa;
     --color-text: #333333;
+    --color-danger: #e74c3c;
+
     --color-text-light: #ffffff;
     --color-border: #e1e4e8;
+    --color-card-background: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
 
 .homepage {
@@ -242,3 +248,5 @@ body {
         margin-bottom: 10px;
     }
 }
+
+

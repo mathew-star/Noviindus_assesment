@@ -1,36 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Assesment{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-{% extends 'user/base.html' %}
-
-{% block content %}
-<div class="form-container">
-    <h2 class="form-title">Login</h2>
-    <form method="POST">
-        {% csrf_token %}
-        
-        {% if form.non_field_errors %}
-            <div class="error-message">
-                {{ form.non_field_errors }}
-            </div>
-        {% endif %}
-
-        <div class="form-group">
-            {{ form.username.label_tag }}
-            {{ form.username }}
-            {% if form.username.errors %}
-                <div class="error-message">{{ form.username.errors }}</div>
-            {% endif %}
-        </div>
-
-        <div class="form-group">
-            {{ form.password.label_tag }}
-            {{ form.password }}
-            {% if form.password.errors %}
-                <div class="error-message">{{ form.password.errors }}</div>
-            {% endif %}
-        </div>
-
-        <button type="submit" class="form-button">Login</button>
-    </form>
-    <p class="form-footer">Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
-</div>
+    {% block css %}
+<style>
+    .login_form{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
+    }
+</style>
 {% endblock %}
+</head>
+<body>
+
+    {% block content %}
+    <div class="login_form">
+    <div class="form-container">
+        <h2 class="form-title">Login</h2>
+        <form method="POST">
+            {% csrf_token %}
+            
+            {% if form.non_field_errors %}
+                <div class="error-message">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+    
+            <div class="form-group">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {% if form.username.errors %}
+                    <div class="error-message">{{ form.username.errors }}</div>
+                {% endif %}
+            </div>
+    
+            <div class="form-group">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                {% if form.password.errors %}
+                    <div class="error-message">{{ form.password.errors }}</div>
+                {% endif %}
+            </div>
+    
+            <button type="submit" class="form-button">Login</button>
+        </form>
+        <p class="form-footer">Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+    </div>
+</div>
+    {% endblock %}
+    
+</body>
+</html>
+
+
