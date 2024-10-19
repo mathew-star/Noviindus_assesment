@@ -1,4 +1,4 @@
-# user/urls.py
+
 from django.urls import path
 from .views import register, CustomLoginView,HomePageView
 from django.contrib.auth.views import LogoutView

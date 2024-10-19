@@ -1,4 +1,3 @@
-# user/views.py
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import login, authenticate
@@ -55,7 +54,7 @@ class HomePageView(LoginRequiredMixin, TemplateView):
     View for the home page.
     """
     template_name = 'user/Hompage.html'
-    login_url = '/login/'  # Redirect to the login page if the user is not authenticated
+    login_url = '/login/' 
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
