@@ -45,20 +45,29 @@ Ensure you have the following installed:
     pip install -r requirements.txt
     ```
 
+
 4. **Set up the database:**
-    Apply migrations to set up the initial database schema:
+    To package up your model changes into individual migration files:
+    ```bash
+    python manage.py makemigrations
+    ```
+
+5. **Set up the database:**
+    Apply migrations to the database:
     ```bash
     python manage.py migrate
     ```
 
 
 
-5. **Run the development server:**
+6. **Run the development server:**
     ```bash
     python manage.py runserver
     ```
 
 Now you can visit `http://127.0.0.1:8000/` in your browser.
+
+
 ![Assesment Homepage](https://github.com/user-attachments/assets/6c814373-6b1c-41c7-adda-c125b73ad007)
 
 ![Assesment Product page](https://github.com/user-attachments/assets/0986358e-febd-441b-9cd8-3d434af45c8a)
