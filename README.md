@@ -59,5 +59,16 @@ Ensure you have the following installed:
     ```
 
 Now you can visit `http://127.0.0.1:8000/` in your browser.
+![Assesment Homepage](https://github.com/user-attachments/assets/6c814373-6b1c-41c7-adda-c125b73ad007)
+
+![Assesment Product page](https://github.com/user-attachments/assets/0986358e-febd-441b-9cd8-3d434af45c8a)
+
+![Assesment add product](https://github.com/user-attachments/assets/0325f596-c16c-4bcd-908a-02e41e47f96a)
+
+![Assesment edit product](https://github.com/user-attachments/assets/d85fb3ea-4c1e-4e3c-845a-7e74e75a1836)
+
+![Assesment cart](https://github.com/user-attachments/assets/fc375e7c-6c76-4ef0-b9ca-4a6c62aa449d)
+
+![Assesment removing product from cart](https://github.com/user-attachments/assets/4e6df96d-ccf6-4fa3-b43c-f1744d97dc41)
 
 
